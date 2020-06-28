@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 param (
   [Parameter(mandatory)]
   [string]
