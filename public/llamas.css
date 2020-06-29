@@ -1,0 +1,9 @@
+body {
+  background: url("https://media.giphy.com/media/3oKIPi2IBBln16wPzW/giphy.gif");
+}
+
+main {
+  height: 0px;
+  width: 0px;
+  display: none;
+}
