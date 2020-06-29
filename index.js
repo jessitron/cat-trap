@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
+  console.log("Got something");
   const where = req.body.where;
   const cookies = req.body.cookies;
   res.send("Thanks");
@@ -27,8 +28,6 @@ app.post('/', (req, res) => {
       console.error(err);
     }
   });
-  // this is terribly vulnerable to command injection,
-  // and I can't find a way that isn't. I need to build an executable somehow
   child_process.execFile("powershell.exe", ["./yo-jess.ps1",
     "-Message",
     "'Find results in: " + filename + "'",
